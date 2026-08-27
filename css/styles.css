@@ -244,44 +244,45 @@ h2 {
 }
 .menu-image {
   height: 210px;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .salgado-1 {
-  background-image: url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Bolo de Cenoura.jpg");
 }
 .salgado-2 {
-  background-image: url("https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Torta de frutas vermelhas.jpg");
 }
 .salgado-3 {
-  background-image: url("https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Cheesecake clássico.jpg");
 }
 .salgado-4 {
   background-image: url("https://images.unsplash.com/photo-1586788680434-30d324b2d46f?auto=format&fit=crop&w=800&q=80");
 }
 .salgado-5 {
-  background-image: url("https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Torta de limão.jpg");
 }
 .salgado-6 {
-  background-image: url("https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Bolos de festa.png");
 }
 .doce-1 {
-  background-image: url("https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Brownie intenso.jpg");
 }
 .doce-2 {
-  background-image: url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Cupcake de baunilha.jpg");
 }
 .doce-3 {
-  background-image: url("https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Macarons sortidos.jpg");
 }
 .doce-4 {
-  background-image: url("https://images.unsplash.com/photo-1575377427642-087cf684f04d?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Brigadeiros gourmet.jpg");
 }
 .doce-5 {
-  background-image: url("https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Mini pavlova.jpg");
 }
 .doce-6 {
-  background-image: url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Banoffee da casa.jpg");
 }
 .bolo-1 {
   background-image: url("https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=800&q=80");
@@ -290,16 +291,16 @@ h2 {
   background-image: url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80");
 }
 .bolo-3 {
-  background-image: url("https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Bolo romântico.jpg");
 }
 .bolo-4 {
-  background-image: url("https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Bento cake.jpg");
 }
 .bolo-5 {
-  background-image: url("https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Naked cake.jpg");
 }
 .bolo-6 {
-  background-image: url("https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80");
+  background-image: url("C:\\Users\\luis_barboza\\Downloads\\AV1\\Av1-Luis_Fernando_B\\imagem\\Bolo infantil.jpg");
 }
 .bolo-header {
   background-position: center 45%;
