@@ -38,4 +38,4 @@ Abra o arquivo `index.html` em um navegador.
 
 Adicione aqui o endereço do GitHub Pages:
 
-`https://SEU-USUARIO.github.io/SEU-REPOSITORIO/`
+https://lfb2010.github.io/Av1-Luis_Fernando_B/
