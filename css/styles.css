@@ -260,6 +260,10 @@ h2 {
   background-image: url("../imagem/Cheesecake%20clássico.jpg");
 }
 
+.salgado-4 {
+  background-image: url("../imagem/Pavê.jpg");
+}
+
 .salgado-5 {
   background-image: url("../imagem/Torta%20de%20limão.jpg");
 }
@@ -365,5 +369,108 @@ footer {
   }
   .page-header {
     padding-top: 9rem;
+  }
+}
+
+/* ...existing code... */
+
+.form-control,
+.form-select {
+  min-height: 46px;
+}
+
+.table-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.table-section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .page-header {
+    padding: 9rem 0 4rem;
+  }
+
+  .order-box {
+    padding: 1.25rem;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+}
+
+/* ...existing code... */
+
+.table-section {
+  max-width: 100%;
+  margin: 0;
+}
+
+.table-section h2 {
+  color: var(--marrom);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.table-section .table {
+  margin-bottom: 0;
+  overflow: hidden;
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  color: var(--marrom);
+  background: var(--papel);
+}
+
+.table-section caption {
+  padding: 0.8rem 0;
+  color: var(--cinza);
+  font-size: 0.85rem;
+  caption-side: bottom;
+}
+
+.table-section thead th {
+  padding: 1rem;
+  border: 0;
+  background: var(--marrom);
+  color: var(--creme);
+  font-weight: 700;
+}
+
+.table-section tbody td {
+  padding: 1rem;
+  border-color: var(--linha);
+  background: var(--papel);
+  vertical-align: middle;
+}
+
+.table-section tbody tr:hover td {
+  background: #e8f3f5;
+}
+
+.table-section tbody td:last-child {
+  color: var(--vermelho);
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .table-section h2 {
+    margin-top: 1rem;
+    font-size: 2.2rem;
+  }
+
+  .table-section .table {
+    font-size: 0.85rem;
+  }
+
+  .table-section thead th,
+  .table-section tbody td {
+    padding: 0.75rem 0.5rem;
   }
 }
