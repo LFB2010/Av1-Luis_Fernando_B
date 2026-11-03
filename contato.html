@@ -133,7 +133,7 @@
                 </div>
               </section>
 
-              <form class="order-box" action="#" method="post">
+              <form class="order-box" id="formulario" action="#" method="post">
                 <p class="eyebrow">Pedido rápido</p>
 
                 <label for="nome" class="form-label">Seu nome</label>
@@ -156,21 +156,27 @@
                   required
                 />
 
-                <label for="categoria" class="form-label"
-                  >Categoria do pedido</label
-                >
+                <label for="servico" class="form-label">Produto</label>
                 <select
                   class="form-select mb-3"
-                  id="categoria"
-                  name="categoria"
+                  id="servico"
+                  name="produto"
                   required
                 >
                   <option value="">Selecione uma opção</option>
-                  <option value="bolo">Bolo personalizado</option>
-                  <option value="torta">Torta</option>
-                  <option value="doces">Doces finos</option>
-                  <option value="salgados">Favoritos da casa</option>
                 </select>
+
+                <label for="quantidade" class="form-label">Quantidade</label>
+                <input
+                  class="form-control mb-3"
+                  id="quantidade"
+                  name="quantidade"
+                  type="number"
+                  min="1"
+                  step="1"
+                  value="1"
+                  required
+                />
 
                 <label for="pedidoTexto" class="form-label"
                   >O que você gostaria?</label
@@ -183,6 +189,13 @@
                   placeholder="Descreva seu pedido"
                   required
                 ></textarea>
+
+                <div
+                  id="resultado"
+                  class="alert d-none"
+                  role="status"
+                  aria-live="polite"
+                ></div>
 
                 <button class="btn btn-light" type="submit">
                   Enviar pedido
@@ -214,5 +227,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="contato.js"></script>
   </body>
 </html>

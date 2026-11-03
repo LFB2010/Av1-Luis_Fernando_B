@@ -156,35 +156,66 @@
           <div class="order-box">
             <p class="eyebrow">Pedido personalizado</p>
             <h2>Conte-nos sua ideia</h2>
-            <form class="row g-3 mt-3">
+            <form class="row g-3 mt-3" id="formularioBolo">
               <div class="col-md-6">
-                <label class="form-label" for="nome">Seu nome</label>
+                <label class="form-label" for="nomeBolo">Seu nome</label>
                 <input
                   class="form-control"
-                  id="nome"
+                  id="nomeBolo"
                   type="text"
                   placeholder="Como podemos chamar você?"
+                  required
                 />
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="tema">Tema</label>
+                <label class="form-label" for="temaBolo">Tema</label>
                 <input
                   class="form-control"
-                  id="tema"
+                  id="temaBolo"
                   type="text"
                   placeholder="Ex.: flores, futebol, minimalista"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="bolo">Modelo do bolo</label>
+                <select class="form-select" id="bolo" required>
+                  <option value="">Selecione um modelo</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="quantidadeBolo"
+                  >Quantidade</label
+                >
+                <input
+                  class="form-control"
+                  id="quantidadeBolo"
+                  type="number"
+                  min="1"
+                  step="1"
+                  value="1"
+                  required
                 />
               </div>
               <div class="col-12">
-                <label class="form-label" for="descricao"
+                <label class="form-label" for="descricaoBolo"
                   >Descreva seu pedido</label
                 >
                 <textarea
                   class="form-control"
-                  id="descricao"
+                  id="descricaoBolo"
                   rows="4"
                   placeholder="Ex.: bolo para 25 pessoas, com cobertura branca e detalhes em dourado"
+                  required
                 ></textarea>
+              </div>
+              <div class="col-12">
+                <div
+                  id="resultadoBolo"
+                  class="alert d-none"
+                  role="status"
+                  aria-live="polite"
+                ></div>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-light">
@@ -217,6 +248,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bolo.js"></script>
   </body>
 </html>
 da
