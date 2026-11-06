@@ -5,6 +5,7 @@ const inputBolo = document.querySelector("#bolo");
 const inputQuantidadeBolo = document.querySelector("#quantidadeBolo");
 const inputDescricaoBolo = document.querySelector("#descricaoBolo");
 const resultadoBolo = document.querySelector("#resultadoBolo");
+const numeroWhatsApp = "5519999263724";
 
 const bolos = [
   { nome: "Bolo clássico", preco: 60 },
@@ -54,9 +55,31 @@ formularioBolo.addEventListener("submit", function (event) {
   }
 
   const total = calcularTotalBolo(preco, quantidade);
-  resultadoBolo.textContent = `Obrigado, ${nome}! Seu pedido de ${quantidade} ${quantidade === 1 ? "bolo" : "bolos"} (${tema}) tem valor estimado de ${formatoMoedaBolo.format(total)}. Entraremos em contato para confirmar os detalhes.`;
+  const mensagem = [
+    "Olá! Gostaria de encomendar um bolo personalizado.",
+    `Nome: ${nome}`,
+    `Tema: ${tema}`,
+    `Modelo: ${inputBolo.options[inputBolo.selectedIndex].textContent}`,
+    `Quantidade: ${quantidade}`,
+    `Descrição: ${descricao}`,
+    `Valor estimado: ${formatoMoedaBolo.format(total)}`,
+  ].join("\n");
+
+  resultadoBolo.textContent =
+    "Pedido preparado. Revise a mensagem e envie pelo WhatsApp: ";
+  adicionarLinkWhatsAppBolo(resultadoBolo, mensagem);
   resultadoBolo.classList.add("alert-success");
 });
+
+function adicionarLinkWhatsAppBolo(elemento, mensagem) {
+  const link = document.createElement("a");
+  link.href = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.className = "alert-link";
+  link.textContent = "Abrir WhatsApp";
+  elemento.append(link);
+}
 
 function calcularTotalBolo(preco, quantidade) {
   return preco * quantidade;

@@ -5,6 +5,7 @@ const inputServico = document.querySelector("#servico");
 const inputQuantidade = document.querySelector("#quantidade");
 const inputPedido = document.querySelector("#pedidoTexto");
 const resultado = document.querySelector("#resultado");
+const numeroWhatsApp = "5519999263724";
 
 const produtos = [
   { nome: "Bolo de cenoura", preco: 26 },
@@ -28,6 +29,17 @@ for (let i = 0; i < produtos.length; i++) {
   opcao.textContent = `${produtos[i].nome} - ${formatoMoeda.format(produtos[i].preco)}`;
   inputServico.appendChild(opcao);
 }
+
+inputTelefone.addEventListener("input", function () {
+  const telefone = normalizarTelefone(inputTelefone.value);
+  const telefoneValido = /^\d{10,11}$/.test(telefone);
+
+  inputTelefone.setCustomValidity(
+    telefoneValido || inputTelefone.value.trim() === ""
+      ? ""
+      : "Informe o DDD e um telefone com 10 ou 11 dígitos.",
+  );
+});
 
 formulario.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -56,9 +68,46 @@ formulario.addEventListener("submit", function (event) {
   }
 
   const total = calcularTotal(preco, quantidade);
-  resultado.textContent = `Obrigado, ${nome}! Seu pedido de ${quantidade} unidade(s) tem valor estimado de ${formatoMoeda.format(total)}. Vamos entrar em contato pelo telefone ${telefone} para confirmar os detalhes.`;
+  const nomeProduto =
+    inputServico.options[inputServico.selectedIndex].textContent;
+  const mensagem = [
+    "Olá! Gostaria de fazer um pedido.",
+    `Nome: ${nome}`,
+    `Telefone: ${telefone}`,
+    `Produto: ${nomeProduto}`,
+    `Quantidade: ${quantidade}`,
+    `Detalhes: ${pedido}`,
+    `Valor estimado: ${formatoMoeda.format(total)}`,
+  ].join("\n");
+
+  resultado.textContent =
+    "Pedido preparado. Revise a mensagem e envie pelo WhatsApp: ";
+  adicionarLinkWhatsApp(resultado, mensagem);
   resultado.classList.add("alert-success");
 });
+
+function normalizarTelefone(telefone) {
+  let digitos = telefone.replace(/\D/g, "");
+
+  if (
+    digitos.startsWith("55") &&
+    (digitos.length === 12 || digitos.length === 13)
+  ) {
+    digitos = digitos.slice(2);
+  }
+
+  return digitos;
+}
+
+function adicionarLinkWhatsApp(elemento, mensagem) {
+  const link = document.createElement("a");
+  link.href = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.className = "alert-link";
+  link.textContent = "Abrir WhatsApp";
+  elemento.append(link);
+}
 
 function calcularTotal(preco, quantidade) {
   return preco * quantidade;
